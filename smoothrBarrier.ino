@@ -3,12 +3,12 @@
 
 #define RELAY  12                           // Port number for Relay (D6) 
 
-const char* ssid = "SmertMoskaliam";
-const char* password =  "independenceofukraine";
-const char* mqttServer = "farmer.cloudmqtt.com";
+const char* ssid = "myWifi";
+const char* password =  "myWifiPass";
+const char* mqttServer = "my.cloudmqtt.com";
 const int mqttPort = 17674;
-const char* mqttUser = "tdjcopeh";
-const char* mqttPassword = "hdscEYdlvPVj";
+const char* mqttUser = "mqttuser";
+const char* mqttPassword = "mqttpass";
  
 WiFiClient espClient;
 PubSubClient client(espClient);
@@ -16,6 +16,9 @@ PubSubClient client(espClient);
 void setup() {
  
   Serial.begin(115200);
+
+  pinMode(RELAY, OUTPUT);
+  digitalWrite(RELAY, LOW);
 
   // Disable wifi AP
   WiFi.softAPdisconnect();
