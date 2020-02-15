@@ -1,2 +1,7 @@
 # smoothrCarBarrier
-software to open car barrier (esp12e, cloudMQTT, relay, telegram bot)
+Firmware to open and close car barrier with using:
+- Arduino framework, 
+- esp12e controller, 
+- cloudMQTT service, 
+- relay, 
+- telegram bot service (in another repo)
